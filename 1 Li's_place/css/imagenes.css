@@ -1,0 +1,85 @@
+.products-page {
+    text-align: center;
+}
+
+.products-body h1 {
+    color: #fff;
+    font-family: "Lucida Calligraphy", cursive;
+}
+
+.products-body {
+    color: #fff;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+.products-page,
+.products-page p,
+.products-page h2 {
+    color: #fff;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+.products-intro {
+    max-width: 760px;
+    margin: 0 auto 36px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 28px;
+    align-items: stretch;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    min-width: 0;
+    padding: 18px 16px;
+    text-align: center;
+    background: rgb(0 0 0 / 35%);
+    border-radius: 14px;
+}
+
+.product-card img {
+    display: block;
+    width: min(100%, 240px);
+    aspect-ratio: 3 / 4;
+    height: auto;
+    margin: 0 auto 12px;
+    object-fit: cover;
+    border: 2px solid rgb(255 255 255 / 85%);
+    border-radius: 14px;
+    box-shadow: 0 0 10px 4px rgb(255 255 255 / 65%), 0 0 24px 8px rgb(255 255 255 / 35%);
+}
+
+.product-card h2 {
+    margin: 0;
+    font-size: 1.15rem;
+}
+
+.product-card p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+    .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px;
+    }
+}
+
+@media (max-width: 520px) {
+    .product-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 20px;
+    }
+
+    .product-card {
+        width: min(100%, 360px);
+        justify-self: center;
+    }
+}

@@ -1,0 +1,292 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding-right: clamp(20px, 5vw, 64px);
+    padding-left: clamp(20px, 5vw, 64px);
+    padding-bottom: 72px;
+    color: #fff;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    background-image: url("../img/2 fondo.jpg");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+h1 {
+    font-family: "Lucida Handwriting", cursive;
+    text-align: center;
+}
+
+h2 {
+    font-family: "Lucida Calligraphy", cursive;
+}
+
+a {
+    color: inherit;
+}
+
+header,
+main {
+    width: min(1100px, 100%);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+header.site-header {
+    position: relative;
+    left: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    width: 100vw;
+    max-width: none;
+    margin: 0;
+    padding: 12px clamp(20px, 5vw, 64px);
+    transform: translateX(-50%);
+    background: #000;
+}
+
+.site-logo {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+}
+
+.site-logo img {
+    display: block;
+    width: clamp(64px, 9vw, 112px);
+    height: auto;
+}
+
+.site-header nav {
+    flex: 1;
+}
+
+.site-header nav ul {
+    justify-content: flex-end;
+    margin: 0;
+}
+
+.site-header nav a {
+    color: #fff;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px 20px;
+    padding: 0;
+    list-style: none;
+}
+
+main {
+    flex: 1;
+    padding: 16px 0 32px;
+}
+
+.contact-section {
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-form {
+    display: grid;
+    gap: 20px;
+    width: min(100%, 640px);
+    margin: 28px auto 0;
+    padding: clamp(20px, 4vw, 32px);
+    text-align: center;
+    border: 2px solid #00b7ff;
+    border-radius: 16px;
+    background: rgb(0 0 0 / 35%);
+    box-shadow: 0 0 12px rgb(0 183 255 / 70%), inset 0 0 10px rgb(0 183 255 / 20%);
+}
+
+.form-field {
+    display: grid;
+    gap: 8px;
+}
+
+.form-field label {
+    font-weight: 700;
+    text-align: center;
+}
+
+.form-field input,
+.form-field textarea {
+    width: 100%;
+    min-width: 0;
+    padding: 12px;
+    color: #fff;
+    font: inherit;
+    text-align: center;
+    border: 2px solid #00b7ff;
+    border-radius: 8px;
+    background: rgb(10 16 40 / 85%);
+}
+
+.form-field textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+}
+
+.contact-form button {
+    justify-self: center;
+    padding: 12px 20px;
+    color: #fff;
+    font: inherit;
+    font-weight: 700;
+    text-align: center;
+    border: 2px solid #00b7ff;
+    border-radius: 8px;
+    background: #082b69;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background: #004caa;
+}
+
+.about-page {
+    text-align: center;
+}
+
+.about-portrait {
+    display: block;
+    width: 200px;
+    max-width: 100%;
+    height: auto;
+    margin: 16px auto;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 4px rgb(255 255 255 / 85%), 0 0 24px 10px rgb(255 255 255 / 55%);
+}
+
+#carrito-imagen {
+    display: block;
+    width: min(100%, 600px);
+    height: auto;
+    margin: 16px auto;
+    border-radius: 16px;
+    box-shadow: 0 0 10px 4px rgb(255 255 255 / 85%), 0 0 24px 10px rgb(255 255 255 / 55%);
+}
+
+.books-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+    margin-top: 24px;
+}
+
+.book-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    overflow: hidden;
+    text-align: center;
+    background: rgb(0 0 0 / 35%);
+    border-radius: 12px;
+}
+
+.book-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 12px 12px 0 0;
+    box-shadow: 0 0 16px 4px rgb(255 255 255 / 75%);
+}
+
+.book-card h3 {
+    margin: 0 16px;
+}
+
+.buy-button {
+    margin: auto 16px 16px;
+    padding: 8px 18px;
+    color: #fff;
+    background: #181b30;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+footer {
+    position: fixed;
+    z-index: 1;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 12px 16px;
+    color: #fff;
+    text-align: center;
+    background: #181b30;
+}
+
+footer p {
+    margin: 0;
+}
+
+@media (max-width: 680px) {
+    header.site-header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .site-header nav {
+        width: 100%;
+    }
+
+    .site-header nav ul {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 800px) {
+    .books-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 520px) {
+    nav ul {
+        gap: 10px 16px;
+    }
+
+    .contact-form {
+        gap: 16px;
+    }
+
+    .contact-form button {
+        justify-self: center;
+    }
+
+    .books-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .book-card {
+        width: min(100%, 360px);
+        justify-self: center;
+    }
+}
